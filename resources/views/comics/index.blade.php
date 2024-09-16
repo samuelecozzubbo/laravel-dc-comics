@@ -35,5 +35,5 @@
 
 
 @section('titlePage')
-    pasta-index
+    comics-index
 @endsection
