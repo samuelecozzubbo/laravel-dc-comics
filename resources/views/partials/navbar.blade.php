@@ -9,6 +9,7 @@
             <div class="navbar-nav">
                 <a class="nav-link" href="{{ route('home') }}">Home</a>
                 <a class="nav-link" href="{{ route('comics.index') }}">Lista fumetti</a>
+                <a class="nav-link" href="{{ route('comics.create') }}">Crea un nuovo fumetto</a>
                 <a class="nav-link" href="{{ route('about') }}">Chi siamo</a>
                 <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
             </div>
