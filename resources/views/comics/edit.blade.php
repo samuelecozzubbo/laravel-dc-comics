@@ -5,7 +5,7 @@
     <div class="container my-5 bg-white">
         <h1>Modifica {{ $comic_to_edit->name }}</h1>
 
-        <form class="py-5" action="{{ route('comics.update') }}" method="POST">
+        <form class="py-5" action="{{ route('comics.update', $comic_to_edit) }}" method="POST">
             {{-- Questo è un token di sicurezza che deve essere presente in tutti i form --}}
             @csrf
             {{-- Method PUT --}}
