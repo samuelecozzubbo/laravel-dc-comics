@@ -15,21 +15,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($comics as $comics)
+                    @foreach ($comics as $comic)
                         <tr class="align-middle">
-                            <th>{{ $comics->title }}</th>
-                            <td>{{ $comics->description }}</td>
-                            <td>{{ $comics->price }}</td>
-                            <td>{{ $comics->type }}</td>
+                            <th>{{ $comic->title }}</th>
+                            <td>{{ $comic->description }}</td>
+                            <td>{{ $comic->price }}</td>
+                            <td>{{ $comic->type }}</td>
                             <td>
                                 {{-- show --}}
-                                <a class="btn btn-success" href="{{ route('comics.show', $comics) }}">
+                                <a class="btn btn-success" href="{{ route('comics.show', $comic) }}">
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
                                 {{-- edit --}}
-                                <a class="btn btn-warning" href="{{ route('comics.edit', $comics) }}">
+                                <a class="btn btn-warning" href="{{ route('comics.edit', $comic) }}">
                                     <i class="fa-solid fa-pencil"></i>
                                 </a>
+                                @include('partials.formdelete')
                             </td>
                         </tr>
                     @endforeach
