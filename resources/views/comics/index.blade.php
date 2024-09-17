@@ -2,6 +2,14 @@
 
 @section('content')
     <div class="container d-flex flex-column" style="max-height: 100vh">
+        {{-- Alert eliminazione fumetto --}}
+        @if (session('deleted'))
+            <div class="alert alert-info mt-2 position-absolute top-20 start-50 translate-middle role="alert">
+                {{ session('deleted') }}
+            </div>
+        @endif
+
+
         <h1 class="text-danger">Comics</h1>
         <div class="table-container overflow-auto">
             <table class="table">

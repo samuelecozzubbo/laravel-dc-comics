@@ -79,6 +79,6 @@ class ComicController extends Controller
     {
         $comic = Comic::find($id);
         $comic->delete();
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('deleted', 'fumetto cancellatto correttamente');
     }
 }
