@@ -4,6 +4,15 @@
 @section('content')
     <div class="container my-5 bg-white">
         <h1>Nuovo fumetto</h1>
+        @if ($errors->any())
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form class="py-5" action="{{ route('comics.store') }}" method="POST">
             {{-- Questo è un token di sicurezza che deve essere presente in tutti i form --}}
             @csrf
