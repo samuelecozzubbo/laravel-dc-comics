@@ -95,7 +95,7 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ComicRequest $request, string $id)
     {
         $data = $request->all();
         $comic_to_update = Comic::find($id);
